@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import HomeView from '../views/HomeView.vue';
+import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
@@ -8,15 +8,39 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView,
+    component: Home,
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/reportCollection',
+    name: 'reportCollection',
     // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
+    // this generates a separate chunk for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    component: () => import('../views/ReportCollection.vue'),
+  },
+  {
+    path: '/reportExpense',
+    name: 'reportExpense',
+    // route level code-splitting
+    // this generates a separate chunk for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import('../views/ReportExpense.vue'),
+  },
+  {
+    path: '/societySettings',
+    name: 'societySettings',
+    // route level code-splitting
+    // this generates a separate chunk for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import('../views/SocietySettings.vue'),
+  },
+  {
+    path: '/appSettings',
+    name: 'appSettings',
+    // route level code-splitting
+    // this generates a separate chunk for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import('../views/AppSettings.vue'),
   },
 ];
 
