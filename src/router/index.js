@@ -11,36 +11,36 @@ const routes = [
     component: Home,
   },
   {
-    path: '/reportCollection',
-    name: 'reportCollection',
+    path: '/collection',
+    name: 'collection',
     // route level code-splitting
     // this generates a separate chunk for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import('../views/ReportCollection.vue'),
+    component: () => import('../views/Collection.vue'),
   },
   {
-    path: '/reportExpense',
-    name: 'reportExpense',
+    path: '/expense',
+    name: 'expense',
     // route level code-splitting
     // this generates a separate chunk for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import('../views/ReportExpense.vue'),
+    component: () => import('../views/Expense.vue'),
   },
   {
-    path: '/societySettings',
-    name: 'societySettings',
+    path: '/settings',
+    name: 'settings',
     // route level code-splitting
     // this generates a separate chunk for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import('../views/SocietySettings.vue'),
+    component: () => import('../views/Settings.vue'),
   },
   {
-    path: '/appSettings',
-    name: 'appSettings',
+    path: '/user',
+    name: 'user',
     // route level code-splitting
     // this generates a separate chunk for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import('../views/AppSettings.vue'),
+    component: () => import('../views/User.vue'),
   },
 ];
 

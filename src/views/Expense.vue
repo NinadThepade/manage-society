@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import CustomInput from '../components/CustomInput.vue';
-import CustomToast from '../components/CustomToast.vue';
+import CustomInput from '../components/_shared/CustomInput.vue';
+import CustomToast from '../components/_shared/CustomToast.vue';
 import { getInputLabels, EXPENSE_OPTIONS } from '../utils/utils';
 
 export default {
@@ -65,6 +65,7 @@ export default {
     },
     constructPayload() {
       return {
+        txnDetails: this.selected.id,
         amt: this.amount,
       };
     },
@@ -72,5 +73,10 @@ export default {
 };
 </script>
 <style scoped>
-
+.reportExpense{
+  width: 250px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+}
 </style>

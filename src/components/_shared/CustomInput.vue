@@ -2,13 +2,13 @@
 <template>
   <div class="row">
     <span>
-      <input :id="data.key"
+      <input :id="formattedData.key"
         class="slide-up"
-        :type="data.type"
-        :placeholder="data.placeHolderText"
+        :type="formattedData.type"
+        :placeholder="formattedData.placeHolderText"
         v-model="inputValue"
         @change="inputUpdated()" />
-      <label :for="data.key">{{ data.label }}</label>
+      <label :for="formattedData.key">{{ formattedData.label }}</label>
     </span>
   </div>
 </template>
@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       inputValue: '',
-      finalStyles: { ...defaultStyles, ...this.data },
+      formattedData: { ...defaultStyles, ...this.data },
     };
   },
   methods: {
@@ -122,9 +122,7 @@ export default {
   }
 }
 .row {
-  max-width: 200px;
   margin: 50px auto;
-  background: #032429;
   text-align: center;
   position: relative;
   z-index: 1;
